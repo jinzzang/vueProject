@@ -1,0 +1,12 @@
+mybatis.type-aliases-package는 어떤 특정 파라미터나 응답값 같은것을 원래
+몇 가지것들은 xml에 적어줘야 하는데 편리하게 다 안적어도 되게 해준다.
+
+mybatis.type-aliases-package=com.example.vueProject : 패키지명을 안적어줘도 된다.
+mybatis.configuration.map-underscore-to-camel-case=true : database에서 _바로
+되어 있어도 객체의 낙타 표기법으로 바꿔줌
+
+ application.properties를 테스트에도 적용해야한다.
+
+### MyBatis 적용1 - 기본
+Mapper class는 마이바티스 매핑 XML을 호출해주는 매퍼 인터페이스이다.
+2:31
