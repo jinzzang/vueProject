@@ -9,4 +9,17 @@ mybatis.configuration.map-underscore-to-camel-case=true : database에서 _바로
 
 ### MyBatis 적용1 - 기본
 Mapper class는 마이바티스 매핑 XML을 호출해주는 매퍼 인터페이스이다.
-2:31
+
+Mapper클래스와 XML의 위치를 같게 해줘야 한다.
+java >> com.example.vueProject.mybatis 이런식으로 있다면, resources >> com.example.vueProject.repository.mybatis
+ex) ItemMapper.java 이면ItemMapper.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.vueProject.repository.mybatis.ItemMapper">
+
+</mapper>
+
+namespace에는 ItemMapper 인터페이스를 지정해야한다.
