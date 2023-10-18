@@ -8,4 +8,20 @@
         INSERT INTO officeWorker(officeName,officeAddress) VALUES (#{officeName},#{officeAddress})
     </insert>
 
+    <select id="findById" resultType="Worker">
+        select officeId, officeName, officeAddress from officeWorker where officeId=#{officeId}
+    </select>
+
+    <select id="findAll" resultType="Worker">
+        select officeId, officeName, officeAddress from officeWorker
+    </select>
+
+    <update id="update">
+        UPDATE officeWorker
+        SET officeName = #{officeName}
+        WHERE officeId = #{officeId}
+    </update>
+
+
+
 </mapper>
