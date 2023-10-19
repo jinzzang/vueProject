@@ -25,7 +25,7 @@ public class VueController {
     public String getSearch(String search){
         Worker worker = new Worker();
         worker.setOfficeName(search);
-        worker.setOfficeAddress("오산2");
+        worker.setOfficeAddress("오산2test");
         myBatisItemRepository.save(worker);
         log.info(search);
 
